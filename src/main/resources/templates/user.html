@@ -3,9 +3,19 @@
 <head>
     <title>Spring Security Example</title>
 </head>
+<form th:action="@{/}" method="get">
+    <input type="submit" value="На главную" class="button">
+</form>
+<br>
+<form th:action="@{/admin}" method="get">
+    <input type="submit" value="Страница Admin" class="button">
+</form>
+<br>
 <body>
 <h1>User, welcome spring boot security page!</h1>
 
-
+<form th:action="@{/logout}" method="get">
+    <input type="submit" value="Выход" class="button">
+</form>
 </body>
 </html>

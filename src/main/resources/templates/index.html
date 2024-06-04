@@ -4,8 +4,28 @@
     <title>Spring Security Example</title>
 </head>
 <body>
+<form th:action="@{/user}" method="get">
+    <input type="submit" value="Страница User" class="button">
+</form>
+<br>
+<form th:action="@{/admin}" method="get">
+    <input type="submit" value="Страница Admin" class="button">
+</form>
 <h1>Welcome to Index PAGE!</h1>
 
+
+<br>
+<form th:action="@{/registration}" method="get">
+    <input type="submit" value="Регистрация" class="button">
+</form>
+<br>
+<form th:action="@{/login}" method="get">
+    <input type="submit" value="Вход" class="button">
+</form>
+<br>
+<form th:action="@{/logout}" method="get">
+    <input type="submit" value="Выход" class="button">
+</form>
 
 </body>
 </html>
