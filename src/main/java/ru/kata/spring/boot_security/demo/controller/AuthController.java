@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import ru.kata.spring.boot_security.demo.model.User;
-import ru.kata.spring.boot_security.demo.repository.RoleRepository;
 import ru.kata.spring.boot_security.demo.service.RegisrtationService;
 import ru.kata.spring.boot_security.demo.util.UserValidator;
 
@@ -25,15 +24,12 @@ public class AuthController {
 
     private final UserValidator userValidator;
     private final RegisrtationService registrationService;
-    private final RoleRepository roleRepository;
 
     @Autowired
     public AuthController(UserValidator userValidator,
-                          RegisrtationService registrationService,
-                          RoleRepository roleRepository) {
+                          RegisrtationService registrationService) {
         this.userValidator = userValidator;
         this.registrationService = registrationService;
-        this.roleRepository = roleRepository;
     }
 
     @GetMapping("/login")

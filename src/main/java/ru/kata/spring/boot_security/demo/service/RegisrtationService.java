@@ -50,8 +50,7 @@ public class RegisrtationService {
         Role userRole = roleRepository.findByName("ROLE_USER");
         if (userRole == null) {
             // Если роль не существует, создаем и сохраняем ее
-            userRole = new Role("ROLE_USER");
-            roleRepository.save(userRole);
+            roleRepository.save(new Role("ROLE_USER"));
         }
 
         // Добавляем роль в набор ролей пользователя
